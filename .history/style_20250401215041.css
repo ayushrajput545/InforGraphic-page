@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8f3f7;;
+}
+
+.header{
+    font-family: "Protest Riot", sans-serif;
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+    font-size: 60px;
+    font-weight: bold;
+    color: #02667a;
+}
+
+.container{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    background-color: red;
+    margin-top: 30px;
+}
+
+.overlap{
+    background-color: #81d0e0;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.steps{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 150px;
+    font-weight: bold;
+    color: #02667a;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: 10px;
+  
+}

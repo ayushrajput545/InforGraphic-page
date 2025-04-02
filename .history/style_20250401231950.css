@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d8f3f7;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    font-family: "Protest Riot", sans-serif;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 40px;
+    color: #02667a;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+
+/* Common Step Layout */
+.content-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 50px 0;
+}
+
+/* Step Numbers */
+.step-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #02667a;
+    width: 50px;
+    text-align: center;
+}
+
+/* Vertical Line */
+.line-vertical {
+    width: 4px;
+    height: 100px;
+    background-color: #02667a;
+    position: relative;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #81d0e0;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+/* Horizontal Line */
+.line-horizontal {
+    width: 20%;
+    height: 4px;
+    background-color: #02667a;
+}
+
+/* Content Boxes */
+.content-box {
+    width: 40%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Step Alignment */
+.odd {
+    flex-direction: row;
+}
+
+.even {
+    flex-direction: row-reverse;
+}

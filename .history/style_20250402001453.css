@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8f3f7;;
+}
+
+.header{
+    font-family: "Protest Riot", sans-serif;
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    color: #02667a;
+}
+
+.container{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.content-steps-odd{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.overlap{
+    background-color: #81d0e0;
+    width: 150px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.steps{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 180px;
+    font-weight: bold;
+    color: #02667a;
+    position: absolute;
+    z-index: 2;
+    bottom: -50px; 
+}
+
+.line-horizontal{
+    background-color: #02667a;
+    width: 35%;
+    height: 5px;
+    position: relative;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #81d0e0;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    top: 90px; 
+}
+
+ 
+
+.line-vertical {
+    width: 5px;  
+    height: 180px;  
+    background-color: #02667a;
+    position: absolute;
+    left: 50%;  
+    transform: translateX(-50%);
+    
+}
+
+.content-right{
+    width: 30%;
+    position: absolute;
+    right: 50px  
+}
+
+.content-right h3{
+    color: #02667a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* Even */
+.content-steps-even{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.overlap-even{
+    background-color: #81d0e0;
+    width: 150px;
+    height: 80px;
+    position: relative;
+    left:80%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.steps-even{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 180px;
+    font-weight: bold;
+    color: #02667a;
+    position: absolute;
+    z-index: 2;
+    bottom: -50px;  
+    
+}
+ 
+
+.line-horizontal-right {
+    background-color: #02667a;
+    width: 30%;
+    height: 5px;
+    position: absolute;
+    left: 52.5%;
+    transform: translateX(0); /* Starts from the circle */
+     
+}
+
+.content-right-even{
+    width: 40%;
+    position: absolute;
+    left: 40px  
+}
+
+.content-right-even h3{
+    color: #02667a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+@media(width< 921px){
+    .header{
+        font-size: 40px;
+    }
+
+    .line-horizontal{
+        width: 30%;
+
+    }
+}
+
+@media(width<800px){
+    .header{
+        font-size: 30px;
+    }
+
+    .line-horizontal{
+        width: 25%;
+    }
+
+    .content-right-even{
+        left: 20px;
+    }
+}
+
+@media(width<700px){
+
+    .container{
+        width: 100%;
+    }
+
+}
+
+@media(width<514px){
+    .header{
+        font-size: 20px;
+    }
+
+    .overlap{
+        width: 100px;
+        height:50px
+    }
+
+    .steps{
+        font-size: 100px;
+        bottom: -30px;
+    }
+
+    .circle{
+        width: 40px;
+        height: 40px;
+    }
+
+    .line-horizontal{
+        width: 28%;
+    }
+
+
+    .overlap-even{
+        width: 100px;
+        height:50px
+    }
+
+    .steps-even{
+        font-size: 100px;
+        bottom: -30px;
+    }
+ 
+}
+
+ 

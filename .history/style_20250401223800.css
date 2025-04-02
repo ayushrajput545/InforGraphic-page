@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8f3f7;;
+}
+
+.header{
+    font-family: "Protest Riot", sans-serif;
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    color: #02667a;
+}
+
+.container{
+    position: relative;
+    width: 60%;
+    margin: auto;
+    background-color: red;
+    margin-top: 100px;
+}
+
+.content-steps{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.overlap{
+    background-color: #81d0e0;
+    width: 150px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.steps{
+    font-family: "Protest Riot", sans-serif;
+    font-size: 180px;
+    font-weight: bold;
+    color: #02667a;
+    position: absolute;
+    z-index: 2;
+    bottom: -50px; 
+}
+
+.line-horizontal{
+    background-color: #02667a;
+    width: 30%;
+    height: 5px;
+    position: relative;
+}
+
+.circle{
+
+    width: 50px; /* Set the same width & height */
+    height: 50px;
+    background-color: #81d0e0; 
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+}
+
+ 
+
+.line-vertical {
+    width: 5px; /* Thickness of the line */
+    height: 120px; /* Adjust as needed */
+    background-color: #02667a;
+    position: absolute;
+    left: 50%; /* Centers the line */
+    transform: translateX(-50%);
+    top: 100%; /* Ensures it starts from the bottom of .line-horizontal */
+}
+
+ 
