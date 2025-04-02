@@ -2,8 +2,16 @@ const express = require("express");
 const puppeteer = require("puppeteer");
 const cors = require("cors");
 const app = express();
+require('dotenv').config()
 
 app.use(cors());  
+
+
+const browser = await puppeteer.launch({
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium-browser',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
+
 
 app.get("/screenshot", async (req, res) => {
     try {
