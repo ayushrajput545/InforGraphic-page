@@ -6,7 +6,7 @@ document.getElementById("download-btn").addEventListener("click", async () => {
     button.disabled = true;
 
     try {
-        const response = await fetch("http://localhost:3000/screenshot");
+        const response = await fetch("https://inforgraphic-page.onrender.com/screenshot");
         const blob = await response.blob();
 
         // Download the screenshot
