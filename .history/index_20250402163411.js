@@ -1,26 +1,11 @@
-document.getElementById("download-btn").addEventListener("click", function () {
-    let button = document.getElementById("download-btn");
-
-    // Hide button before taking screenshot
-    button.style.display = "none";
-
-    // Delay to allow the button to be hidden before capturing
-    setTimeout(() => {
-        html2canvas(document.body, { scale: 2 }).then(canvas => {
-            let link = document.createElement("a");
-            link.href = canvas.toDataURL("image/png");
-            link.download = "screenshot.png";
-            link.click();
-
-            // Restore button after capturing
-            button.style.display = "block";
-        }).catch(err => {
-            console.error("Screenshot capture failed:", err);
-        });
-    }, 300); // Small delay to allow UI update
+document.getElementById("download-btn").addEventListener("click", function() {
+    html2canvas(document.body).then(canvas => {
+        let link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "screenshot.png";
+        link.click();
+    });
 });
-
-
 
 
 // document.getElementById("download-btn").addEventListener("click", async () => {

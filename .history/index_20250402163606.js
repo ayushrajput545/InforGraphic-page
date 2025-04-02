@@ -1,25 +1,22 @@
-document.getElementById("download-btn").addEventListener("click", function () {
-    let button = document.getElementById("download-btn");
+document.getElementById("download-btn").addEventListener("click", function() {
+    // Ensure html2canvas is loaded
+    if (typeof html2canvas === "undefined") {
+        alert("html2canvas library not loaded!");
+        return;
+    }
 
-    // Hide button before taking screenshot
-    button.style.display = "none";
+    // Target only the container instead of the entire document body
+    let element = document.querySelector(".container");
 
-    // Delay to allow the button to be hidden before capturing
-    setTimeout(() => {
-        html2canvas(document.body, { scale: 2 }).then(canvas => {
-            let link = document.createElement("a");
-            link.href = canvas.toDataURL("image/png");
-            link.download = "screenshot.png";
-            link.click();
-
-            // Restore button after capturing
-            button.style.display = "block";
-        }).catch(err => {
-            console.error("Screenshot capture failed:", err);
-        });
-    }, 300); // Small delay to allow UI update
+    html2canvas(element, { scale: 2 }).then(canvas => {
+        let link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "screenshot.png";
+        link.click();
+    }).catch(err => {
+        console.error("Screenshot capture failed:", err);
+    });
 });
-
 
 
 
