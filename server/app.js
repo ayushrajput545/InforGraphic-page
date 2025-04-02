@@ -7,16 +7,19 @@ require('dotenv').config()
 app.use(cors());  
 
 
-const browser = await puppeteer.launch({
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium-browser',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-});
+ 
 
 
 app.get("/screenshot", async (req, res) => {
     try {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium-browser',
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+        
         const page = await browser.newPage();
+
+ 
 
        
         await page.goto("https://infographic4u.netlify.app", { waitUntil: "networkidle2" });
